@@ -15,10 +15,20 @@ int	main(int argc, char *argv[])
 	}
 	else
 	{
+    i = 1;
+    while (i < argc)
+    {
+      if ((*argv[i] == '>') && (*argv[i + 1] == '\0'))
+      {
+        put_into_file(i, argv, buf);
+        return (0);
+      }
+      i++;
+    }
 		i = 1;
 		while (i < argc)
 		{
-			if (*argv[i] == '-')
+			if ((*argv[i] == '-') && (*argv[i + 1] == '\0'))
 			{
 				print_input(buf);
 			}

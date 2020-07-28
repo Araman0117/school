@@ -8,3 +8,5 @@
 #include <string.h>
 
 void	print_input(char *str);
+
+void  put_into_file(int i, char *argv[], char *str);
