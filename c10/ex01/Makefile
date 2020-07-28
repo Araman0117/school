@@ -2,12 +2,12 @@ NAME = ft_cat
 
 SRC = main.c source.c
 
-CFLAGS = -Wextra -Wall -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(CFLAGS) -o $(NAME) $(SRC)
+	gcc $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -f *.o

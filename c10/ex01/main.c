@@ -3,11 +3,11 @@
 
 int	main(int argc, char *argv[])
 {
-	long long int	sizef;
-	int		fd;
-	int		i;
-	char		buf[29696];
-	char		*str;
+	int	sizef;
+	int	fd;
+	int	i;
+	char	buf[29696];
+	char	*str;
 
 	if (argc < 2)
 	{

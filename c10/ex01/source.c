@@ -1,10 +1,12 @@
-#include "headers.h"
+#include <unistd.h>
 
 void	print_input(char *str)
 {
+	int ret;
+
 	while (1)
 	{
-		if (read(2, str, 29696) < 1)
+		if ((ret = read(0, str, 29696)) < 1)
 			break;
 		while (*str)
 		{

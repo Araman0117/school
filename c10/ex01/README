@@ -1,12 +1,13 @@
-gcc -Wextra -Wall -Werror -c source.c	//создаем объекты .о
+gcc -Wall -Wextra -Werror -c source.c	//создаем объекты .о
 
 ar rc libcate.a source.o		//собираем библиотеку из *.о
 
 rm -f *.o				//чистим мусор после сборки
 
-gcc main.c -L. -lcate			//компилим мэйн с библиотекой
+gcc main.c -L. -lcate -o exeg		//компилим мэйн с библиотекой
 					//причем ее можно кинуть куда
 					//угодно но это не точно
+					//файл exeg вместо a.out
 					
 ranlib libcate.a			//оптимизация доступа к ф-ям
 					//в библе, т.е. индексирует ф-ии
