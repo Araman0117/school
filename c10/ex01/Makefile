@@ -1,12 +1,13 @@
 NAME = ft_cat
 
-SRC = headers.h main.c source.c
+SRC = main.c source.c
 
+CFLAGS = -Wextra -Wall -Werror
 
 all: $(NAME)
 
 $(NAME):
-	gcc -o $(NAME) $(SRC)
+	gcc $(CFLAGS) -o $(NAME) $(SRC)
 
 clean:
 	rm -f *.o

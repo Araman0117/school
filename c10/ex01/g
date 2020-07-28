@@ -1,0 +1,4 @@
+gcc -Wextra -Wall -Werror -c source.c
+ar rc libcate.a source.o
+rm -f *.o
+gcc main.c -L. -lcate
